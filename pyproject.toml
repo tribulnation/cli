@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tribulnation-cli"
+version = "0.1.0"
+description = "The tn command launcher for independently installed Tribulnation tools"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Tribulnation"}]
+dependencies = ["click>=8.1,<9", "typer>=0.12,<1"]
+
+[project.scripts]
+tn = "tribulnation.cli:app"
+
+[project.optional-dependencies]
+test = ["pytest>=8", "build", "ruff"]
+
+[project.urls]
+Repository = "https://github.com/tribulnation/cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
