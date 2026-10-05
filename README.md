@@ -88,5 +88,6 @@ ruff format --check .
 python -m build
 ```
 
-See [the module map](docs/architecture.md). Publishing a PyPI release is a separate
-maintainer action; CI only checks and builds the package.
+See [the module map](docs/architecture.md) and [release instructions](docs/releases.md).
+Merging a `release` or `release/*` pull request into `main` publishes through
+PyPI trusted publishing after validation.
